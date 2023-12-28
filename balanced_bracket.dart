@@ -26,9 +26,10 @@ bool _checkBalancedBracket(String input) {
 }
 
 void main() {
-  String input1 = "({[()]})";
-  String input2 = "({[()]}";
+  List<String> inputData = ['({[()]})', '({[()]}', '({[()]}  )'];
 
-  print("Input 1: ${_checkBalancedBracket(input1)}"); // Output: true
-  print("Input 2: ${_checkBalancedBracket(input2)}"); // Output: false
+  for (var element in inputData) {
+    print("Input: $element");
+    print("Output: ${_checkBalancedBracket(element)}\n");
+  }
 }

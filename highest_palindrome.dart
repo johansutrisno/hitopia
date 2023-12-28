@@ -49,16 +49,32 @@ bool isPalindrome(String str) {
   return cleanedStr == cleanedStr.split('').reversed.join('');
 }
 
-void main() {
-  final input = "3123";
-  final k = 2;
+final _inputData = [
+  {
+    'input': '3123',
+    'k': 1,
+  },
+  {
+    'input': '393923',
+    'k': 2,
+  },
+  {
+    'input': '3912323',
+    'k': 1,
+  }
+];
 
-  final result = _makePalindrome(input, k);
-  if (isPalindrome(result)) {
-    print("Input: $input");
-    print("k: $k");
-    print("Output: $result");
-  } else {
-    print("-1");
+void main() {
+  for (var element in _inputData) {
+    final input = element['input'] as String;
+    final k = element['k'] as int;
+    final result = _makePalindrome(input, k);
+    if (isPalindrome(result)) {
+      print("Input: $input");
+      print("k: $k");
+      print("Output: $result\n");
+    } else {
+      print("-1\n");
+    }
   }
 }
