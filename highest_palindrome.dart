@@ -74,7 +74,9 @@ void main() {
       print("k: $k");
       print("Output: $result\n");
     } else {
-      print("-1\n");
+      print("Input: $input");
+      print("k: $k");
+      print("Output: -1\n");
     }
   }
 }
